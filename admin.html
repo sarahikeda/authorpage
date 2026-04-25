@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Profiles — Admin · Libro.fm</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="brand">Libro<span class="dot">.</span>fm <span style="font-family:var(--sans);font-size:.7rem;font-weight:500;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-left:6px;">Admin</span></a>
+    <nav class="nav">
+      <a href="#">Catalog</a>
+      <a href="admin.html" style="color:var(--green-deep);font-weight:600;">Profiles</a>
+      <a href="#">Campaigns</a>
+      <a href="#">Reports</a>
+    </nav>
+    <div class="header-actions">
+      <span style="font-size:.85rem;color:var(--muted);">sarah@libro.fm</span>
+    </div>
+  </div>
+</header>
+
+<div class="admin-shell">
+  <aside class="admin-side">
+    <h4>Profiles</h4>
+    <a href="admin.html" class="active">All profiles</a>
+    <a href="#">Authors</a>
+    <a href="#">Narrators</a>
+    <h4>Claim status</h4>
+    <a href="#">Pending verification</a>
+    <a href="#">Awaiting review</a>
+    <a href="#">Reported</a>
+    <h4>Campaigns</h4>
+    <a href="#">Pacific Northwest</a>
+    <a href="#">Women in translation</a>
+    <a href="#">Authors who narrate</a>
+  </aside>
+
+  <main class="admin-main">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px;">
+      <div>
+        <h1 style="font-size:2rem;margin:0 0 4px;">Profiles</h1>
+        <p style="margin:0;color:var(--muted);font-size:.92rem;">Authors and narrators in the Libro.fm catalog.</p>
+      </div>
+      <a href="#" class="btn btn-primary btn-sm">+ Invite to claim</a>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="label">Total profiles</div><div class="value">14,827</div><div class="delta">+312 this month</div></div>
+      <div class="kpi"><div class="label">Claimed</div><div class="value">2,941</div><div class="delta">19.8% of total</div></div>
+      <div class="kpi"><div class="label">Pending verification</div><div class="value">86</div><div class="delta" style="color:var(--gold);">7 over 14 days</div></div>
+      <div class="kpi"><div class="label">Tagged for campaigns</div><div class="value">1,204</div><div class="delta">+58 this week</div></div>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" placeholder="Search by name, ASIN, or publisher…" />
+      <span class="chip active">All</span>
+      <span class="chip">Authors</span>
+      <span class="chip">Narrators</span>
+      <span class="chip">Claimed</span>
+      <span class="chip">Unclaimed</span>
+      <span class="chip">Pending</span>
+    </div>
+
+    <table class="profiles">
+      <thead>
+        <tr>
+          <th style="width:32%;">Name</th>
+          <th>Type</th>
+          <th>Titles</th>
+          <th>Status</th>
+          <th>Tags</th>
+          <th>Last activity</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="name"><a href="index.html" style="color:inherit;text-decoration:none;">Eleanor Ashworth</a></div>
+            <div class="sub">Coastlight Press</div>
+          </td>
+          <td>Author</td>
+          <td>8</td>
+          <td><span class="status status-unclaimed">Unclaimed</span></td>
+          <td><span class="tag">Lit fiction</span></td>
+          <td>—</td>
+          <td><a href="claim.html" class="btn btn-outline btn-sm">Send claim link</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name"><a href="narrator.html" style="color:inherit;text-decoration:none;">Cassandra Lin</a></div>
+            <div class="sub">Independent</div>
+          </td>
+          <td>Narrator</td>
+          <td>42</td>
+          <td><span class="status status-unclaimed">Unclaimed</span></td>
+          <td><span class="tag">Lit fiction</span></td>
+          <td>—</td>
+          <td><a href="claim.html" class="btn btn-outline btn-sm">Send claim link</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name">Marlowe Bertram</div>
+            <div class="sub">Harbor &amp; Vine</div>
+          </td>
+          <td>Author</td>
+          <td>5</td>
+          <td><span class="status status-claimed">Claimed</span></td>
+          <td><span class="tag">Historical</span> <span class="tag">PNW</span></td>
+          <td>2 days ago</td>
+          <td><a href="#" class="btn btn-ghost btn-sm">View</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name">Daniel Okafor</div>
+            <div class="sub">Independent</div>
+          </td>
+          <td>Narrator</td>
+          <td>61</td>
+          <td><span class="status status-pending">Pending</span></td>
+          <td>—</td>
+          <td>Sent Apr 12</td>
+          <td><a href="#" class="btn btn-ghost btn-sm">Resend</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name">Iris Halloran</div>
+            <div class="sub">Greyhound Books</div>
+          </td>
+          <td>Author</td>
+          <td>3</td>
+          <td><span class="status status-claimed">Claimed</span></td>
+          <td><span class="tag">Mystery</span></td>
+          <td>1 week ago</td>
+          <td><a href="#" class="btn btn-ghost btn-sm">View</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name">Tomás Vega</div>
+            <div class="sub">Sable House</div>
+          </td>
+          <td>Author</td>
+          <td>11</td>
+          <td><span class="status status-claimed">Claimed</span></td>
+          <td><span class="tag">Lit fiction</span> <span class="tag">Translation</span></td>
+          <td>Yesterday</td>
+          <td><a href="#" class="btn btn-ghost btn-sm">View</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name">Priya Subramanian</div>
+            <div class="sub">Coastlight Press</div>
+          </td>
+          <td>Author</td>
+          <td>2</td>
+          <td><span class="status status-unclaimed">Unclaimed</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td><a href="claim.html" class="btn btn-outline btn-sm">Send claim link</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name">Wren Mackey</div>
+            <div class="sub">Independent</div>
+          </td>
+          <td>Narrator</td>
+          <td>27</td>
+          <td><span class="status status-pending">Pending</span></td>
+          <td>—</td>
+          <td>Sent Apr 19</td>
+          <td><a href="#" class="btn btn-ghost btn-sm">Resend</a></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="name">August Reeve</div>
+            <div class="sub">Harbor &amp; Vine</div>
+          </td>
+          <td>Author</td>
+          <td>6</td>
+          <td><span class="status status-claimed">Claimed</span></td>
+          <td><span class="tag">Memoir</span></td>
+          <td>3 weeks ago</td>
+          <td><a href="#" class="btn btn-ghost btn-sm">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:.85rem;color:var(--muted);">
+      <span>Showing 1–9 of 14,827</span>
+      <div style="display:flex;gap:8px;">
+        <a href="#" class="chip">‹ Prev</a>
+        <a href="#" class="chip active">1</a>
+        <a href="#" class="chip">2</a>
+        <a href="#" class="chip">3</a>
+        <a href="#" class="chip">Next ›</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

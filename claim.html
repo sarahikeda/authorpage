@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Claim your profile — Libro.fm</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="brand">Libro<span class="dot">.</span>fm</a>
+    <nav class="nav">
+      <a href="#">Browse</a>
+      <a href="#">Bookstores</a>
+      <a href="#">Gifts</a>
+      <a href="#">For Authors</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#" class="btn btn-ghost btn-sm">Sign in</a>
+    </div>
+  </div>
+</header>
+
+<main class="flow">
+
+  <div class="steps">
+    <div class="step done">1. Verify</div>
+    <div class="step active">2. Review profile</div>
+    <div class="step">3. Tags &amp; consent</div>
+    <div class="step">4. Submit</div>
+  </div>
+
+  <div class="eyebrow" style="text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;color:var(--green);font-weight:600;margin-bottom:8px;">Claim profile</div>
+  <h1 style="font-size:2.2rem;margin-bottom:8px;">Welcome, Eleanor.</h1>
+  <p style="margin-bottom:32px;color:var(--ink-soft);">
+    We verified your identity from the link sent to <strong>e.ashworth@&hellip;.com</strong>.
+    Now review what your publisher submitted to Libro.fm. You can edit anything below before publishing.
+  </p>
+
+  <div class="notice">
+    <strong>Heads up —</strong> the bio and links below were submitted by your publisher,
+    Coastlight Press. Edits you save here will replace what readers currently see.
+  </div>
+
+  <form>
+    <div class="field">
+      <label for="name">Display name</label>
+      <input id="name" type="text" value="Eleanor Ashworth" />
+    </div>
+
+    <div class="field">
+      <label for="tagline">Tagline</label>
+      <input id="tagline" type="text" value="Novelist of quiet rooms and long memory." />
+      <div class="hint">A short line that appears under your name. ~70 characters.</div>
+    </div>
+
+    <div class="field">
+      <label for="bio">Bio</label>
+      <textarea id="bio">Eleanor Ashworth is the author of seven novels and two collections of essays. Her work, often set along the coastal villages of the Pacific Northwest, explores inheritance, language, and the small inflections of family life. She is a former Whiting Award winner and her novel The Salt Glass was a finalist for the National Book Critics Circle Award. She lives in Port Townsend, Washington with her husband and two large, indifferent dogs.</textarea>
+    </div>
+
+    <div class="field">
+      <label for="site">Website</label>
+      <input id="site" type="text" value="https://eleanorashworth.com" />
+    </div>
+
+    <div class="field">
+      <label>Social links</label>
+      <div style="display:grid;gap:8px;">
+        <input type="text" value="https://x.com/eashworth" />
+        <input type="text" value="https://instagram.com/eashworth.writes" />
+        <input type="text" value="https://eashworth.substack.com" />
+      </div>
+    </div>
+
+    <h2 style="font-size:1.3rem;margin-top:40px;">Optional tags &amp; campaigns</h2>
+    <p style="font-size:.9rem;color:var(--muted);margin-bottom:16px;">
+      Opt in to thematic campaigns. We'll only feature you in collections you approve.
+      You can change these any time.
+    </p>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" checked /> <span><strong>Literary fiction</strong><span class="desc">Genre — auto-suggested from your catalog.</span></span></label>
+      <label><input type="checkbox" checked /> <span><strong>Pacific Northwest writers</strong><span class="desc">Regional collection. Featured every September.</span></span></label>
+      <label><input type="checkbox" /> <span><strong>Women in translation</strong><span class="desc">Annual campaign. Add only if relevant to you.</span></span></label>
+      <label><input type="checkbox" /> <span><strong>Indigenous &amp; First Nations voices</strong><span class="desc">Self-identification only.</span></span></label>
+      <label><input type="checkbox" checked /> <span><strong>Authors who narrate</strong><span class="desc">You've narrated at least one of your titles.</span></span></label>
+    </div>
+
+    <div class="flow-actions">
+      <a href="index.html" class="btn btn-ghost btn-sm">← Cancel</a>
+      <div style="display:flex;gap:10px;">
+        <a href="#" class="btn btn-outline btn-sm">Save draft</a>
+        <a href="index.html" class="btn btn-primary">Publish profile</a>
+      </div>
+    </div>
+  </form>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">© 2026 Libro.fm · Prototype — claim flow</div>
+  </div>
+</footer>
+
+</body>
+</html>
