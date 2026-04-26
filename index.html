@@ -8,6 +8,7 @@
 <script src="js/config.js" defer></script>
 <script src="js/api.js" defer></script>
 <script src="js/profile.js" defer></script>
+<script src="js/prototype.js" defer></script>
 </head>
 <body data-profile-slug="eleanor-ashworth">
 
@@ -56,6 +57,7 @@
 
       <div class="cta-row">
         <a href="claim.html" class="btn btn-primary">Claim this profile</a>
+        <button type="button" class="btn btn-follow">Follow author</button>
         <span class="unclaimed-pill">○ Unclaimed profile</span>
       </div>
 
@@ -75,54 +77,166 @@
     </div>
 
     <div class="book-grid">
-      <a href="#" class="book">
-        <div class="cover cv-1"><div><div class="t">The Salt Glass</div><div class="a">A Novel</div></div></div>
-        <div class="title">The Salt Glass</div>
-        <div class="narrator">Narrated by Cassandra Lin</div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="The Salt Glass cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#15314f"/>
+            <path d="M0,290 Q100,250 200,275 T400,265 L400,400 L0,400 Z" fill="#2a5a8a" opacity="0.55"/>
+            <path d="M0,325 Q120,290 200,315 T400,305 L400,400 L0,400 Z" fill="#4a82b8" opacity="0.5"/>
+            <text x="200" y="155" text-anchor="middle" fill="#efe5cc" font-family="Georgia,serif" font-style="italic" font-size="46">The Salt</text>
+            <text x="200" y="205" text-anchor="middle" fill="#efe5cc" font-family="Georgia,serif" font-style="italic" font-size="46">Glass</text>
+            <text x="200" y="370" text-anchor="middle" fill="#efe5cc" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <span class="pick-badge">Bookseller pick</span>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">The Salt Glass</a></div>
+        <div class="narrator">Narrated by <a href="narrator.html">Cassandra Lin</a></div>
         <div class="price">12h 14m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-2"><div><div class="t">Harbor Light</div><div class="a">A Novel</div></div></div>
-        <div class="title">Harbor Light</div>
-        <div class="narrator">Narrated by Cassandra Lin</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="Harbor Light cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="hl" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f4a259"/><stop offset="1" stop-color="#9c3a1a"/></linearGradient></defs>
+            <rect width="400" height="400" fill="url(#hl)"/>
+            <circle cx="200" cy="220" r="60" fill="#fde7c2" opacity="0.8"/>
+            <rect x="195" y="260" width="10" height="100" fill="#2a1208"/>
+            <path d="M180,360 L220,360 L210,380 L190,380 Z" fill="#2a1208"/>
+            <text x="200" y="105" text-anchor="middle" fill="#fff7e6" font-family="Georgia,serif" font-size="46" font-weight="700">Harbor</text>
+            <text x="200" y="150" text-anchor="middle" fill="#fff7e6" font-family="Georgia,serif" font-size="46" font-weight="700">Light</text>
+            <text x="200" y="395" text-anchor="middle" fill="#fff7e6" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">Harbor Light</a></div>
+        <div class="narrator">Narrated by <a href="narrator.html">Cassandra Lin</a></div>
         <div class="price">10h 02m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-3"><div><div class="t">The House on Marrow Lane</div><div class="a">A Novel</div></div></div>
-        <div class="title">The House on Marrow Lane</div>
-        <div class="narrator">Narrated by Eleanor Ashworth</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="The House on Marrow Lane cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#e8dcc4"/>
+            <rect x="0" y="280" width="400" height="120" fill="#3a4a3e"/>
+            <polygon points="160,200 240,200 230,180 170,180" fill="#1f2a23"/>
+            <rect x="160" y="200" width="80" height="80" fill="#1f2a23"/>
+            <rect x="180" y="225" width="14" height="20" fill="#f1c869"/>
+            <rect x="206" y="225" width="14" height="20" fill="#f1c869"/>
+            <rect x="193" y="255" width="14" height="25" fill="#0d130f"/>
+            <text x="200" y="80" text-anchor="middle" fill="#1f2a23" font-family="Georgia,serif" font-size="28" font-weight="700">The House on</text>
+            <text x="200" y="120" text-anchor="middle" fill="#1f2a23" font-family="Georgia,serif" font-size="40" font-weight="700" font-style="italic">Marrow Lane</text>
+            <text x="200" y="370" text-anchor="middle" fill="#e8dcc4" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">The House on Marrow Lane</a></div>
+        <div class="narrator">Narrated by <a href="narrator.html">Eleanor Ashworth</a></div>
         <div class="price">9h 41m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-4"><div><div class="t">Inheritance Weather</div><div class="a">Essays</div></div></div>
-        <div class="title">Inheritance Weather</div>
-        <div class="narrator">Narrated by Eleanor Ashworth</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="Inheritance Weather cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="iw" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3b2a5a"/><stop offset="1" stop-color="#1a1230"/></linearGradient></defs>
+            <rect width="400" height="400" fill="url(#iw)"/>
+            <ellipse cx="120" cy="220" rx="80" ry="22" fill="#7c5fe0" opacity="0.6"/>
+            <ellipse cx="270" cy="250" rx="100" ry="28" fill="#9b81e8" opacity="0.5"/>
+            <ellipse cx="180" cy="285" rx="120" ry="22" fill="#b8a4ee" opacity="0.45"/>
+            <text x="200" y="120" text-anchor="middle" fill="#f0e8ff" font-family="Georgia,serif" font-size="42" font-weight="400" letter-spacing="-1">Inheritance</text>
+            <text x="200" y="170" text-anchor="middle" fill="#f0e8ff" font-family="Georgia,serif" font-size="42" font-style="italic">Weather</text>
+            <text x="200" y="360" text-anchor="middle" fill="#f0e8ff" font-family="Helvetica,sans-serif" font-size="11" font-weight="600" letter-spacing="3">ESSAYS — ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">Inheritance Weather</a></div>
+        <div class="narrator">Narrated by <a href="narrator.html">Eleanor Ashworth</a></div>
         <div class="price">7h 18m · $13.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-5"><div><div class="t">Quiet Rooms</div><div class="a">A Novel</div></div></div>
-        <div class="title">Quiet Rooms</div>
-        <div class="narrator">Narrated by Daniel Okafor</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="Quiet Rooms cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#7d2424"/>
+            <rect x="60" y="80" width="120" height="180" fill="#f4d99c" opacity="0.92"/>
+            <rect x="220" y="80" width="120" height="180" fill="#f4d99c" opacity="0.7"/>
+            <line x1="120" y1="80" x2="120" y2="260" stroke="#7d2424" stroke-width="6"/>
+            <line x1="60" y1="170" x2="180" y2="170" stroke="#7d2424" stroke-width="6"/>
+            <line x1="280" y1="80" x2="280" y2="260" stroke="#7d2424" stroke-width="6"/>
+            <line x1="220" y1="170" x2="340" y2="170" stroke="#7d2424" stroke-width="6"/>
+            <text x="200" y="320" text-anchor="middle" fill="#f4d99c" font-family="Georgia,serif" font-size="44" font-weight="400" font-style="italic">Quiet Rooms</text>
+            <text x="200" y="370" text-anchor="middle" fill="#f4d99c" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">Quiet Rooms</a></div>
+        <div class="narrator">Narrated by <a href="#">Daniel Okafor</a></div>
         <div class="price">11h 36m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-6"><div><div class="t">A Field of Lesser Lights</div><div class="a">A Novel</div></div></div>
-        <div class="title">A Field of Lesser Lights</div>
-        <div class="narrator">Narrated by Cassandra Lin</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="A Field of Lesser Lights cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#0d141d"/>
+            <g fill="#f1c869">
+              <circle cx="60" cy="80" r="2"/><circle cx="120" cy="50" r="3"/><circle cx="180" cy="90" r="2"/>
+              <circle cx="240" cy="60" r="2.5"/><circle cx="300" cy="100" r="2"/><circle cx="350" cy="70" r="3"/>
+              <circle cx="80" cy="160" r="2"/><circle cx="160" cy="180" r="2.5"/><circle cx="320" cy="180" r="2"/>
+              <circle cx="40" cy="220" r="2"/><circle cx="370" cy="220" r="2.5"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#efe5cc" font-family="Georgia,serif" font-size="32" font-weight="400">A Field of</text>
+            <text x="200" y="320" text-anchor="middle" fill="#f1c869" font-family="Georgia,serif" font-size="36" font-weight="700" font-style="italic">Lesser Lights</text>
+            <text x="200" y="370" text-anchor="middle" fill="#efe5cc" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">A Field of Lesser Lights</a></div>
+        <div class="narrator">Narrated by <a href="narrator.html">Cassandra Lin</a></div>
         <div class="price">13h 22m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-7"><div><div class="t">The Long Beach</div><div class="a">Essays</div></div></div>
-        <div class="title">The Long Beach</div>
-        <div class="narrator">Narrated by Eleanor Ashworth</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="The Long Beach cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#e8d4a8"/>
+            <rect y="0" width="400" height="220" fill="#cfd9c4"/>
+            <line x1="0" y1="220" x2="400" y2="220" stroke="#7a6a48" stroke-width="1"/>
+            <circle cx="320" cy="100" r="36" fill="#f4e1b8" opacity="0.9"/>
+            <text x="200" y="290" text-anchor="middle" fill="#3a2f18" font-family="Georgia,serif" font-size="36" font-weight="400">The</text>
+            <text x="200" y="335" text-anchor="middle" fill="#3a2f18" font-family="Georgia,serif" font-size="48" font-weight="700" font-style="italic">Long Beach</text>
+            <text x="200" y="380" text-anchor="middle" fill="#3a2f18" font-family="Helvetica,sans-serif" font-size="11" font-weight="600" letter-spacing="3">ESSAYS — ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">The Long Beach</a></div>
+        <div class="narrator">Narrated by <a href="narrator.html">Eleanor Ashworth</a></div>
         <div class="price">6h 50m · $13.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-8"><div><div class="t">Mariner's Daughter</div><div class="a">A Novel</div></div></div>
-        <div class="title">Mariner's Daughter</div>
-        <div class="narrator">Narrated by Daniel Okafor</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="Mariner's Daughter cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#1f5d5e"/>
+            <g stroke="#9fdcd8" stroke-width="2" fill="none" opacity="0.85">
+              <circle cx="200" cy="220" r="80"/>
+              <circle cx="200" cy="220" r="60"/>
+              <line x1="200" y1="140" x2="200" y2="300"/>
+              <line x1="120" y1="220" x2="280" y2="220"/>
+              <polygon points="200,160 210,220 200,210 190,220" fill="#9fdcd8"/>
+              <polygon points="200,280 210,220 200,230 190,220" fill="#9fdcd8" opacity="0.5"/>
+            </g>
+            <text x="200" y="90" text-anchor="middle" fill="#e6f5f3" font-family="Georgia,serif" font-size="32" font-weight="700">Mariner's</text>
+            <text x="200" y="130" text-anchor="middle" fill="#e6f5f3" font-family="Georgia,serif" font-size="40" font-weight="700" font-style="italic">Daughter</text>
+            <text x="200" y="370" text-anchor="middle" fill="#e6f5f3" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">Mariner's Daughter</a></div>
+        <div class="narrator">Narrated by <a href="#">Daniel Okafor</a></div>
         <div class="price">12h 47m · $14.99</div>
-      </a>
+      </div>
+
     </div>
   </section>
 

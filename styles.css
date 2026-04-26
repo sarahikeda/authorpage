@@ -237,23 +237,85 @@ section.block:first-of-type { border-top: none; }
 .book { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); }
 .book:hover .title { color: var(--teal-deep); }
 .book .cover {
+  position: relative;
   aspect-ratio: 1 / 1;
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 14px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+.book .cover svg { display: block; width: 100%; height: 100%; }
+.book .cover .play {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
-  text-align: center;
-  color: var(--white);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, background 0.15s ease;
+  padding: 0;
+  z-index: 2;
 }
-.book .cover .t { font-weight: 800; font-size: 1.1rem; line-height: 1.15; letter-spacing: -0.01em; }
-.book .cover .a { margin-top: 12px; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.9; font-weight: 600; }
+.book .cover .play::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 11px;
+  border-color: transparent transparent transparent var(--ink);
+  margin-left: 3px;
+}
+.book .cover .play.playing::before {
+  width: 11px;
+  height: 11px;
+  border: none;
+  background: var(--ink);
+  margin-left: 0;
+  box-shadow: inset 4px 0 0 0 rgba(255,255,255,1), inset -4px 0 0 0 rgba(255,255,255,1);
+}
+.book:hover .cover .play, .book .cover .play:focus, .book .cover .play.playing {
+  opacity: 1;
+  transform: translateY(0);
+}
+.book .cover .play:hover { background: var(--teal); }
 .book .title { font-size: 1rem; font-weight: 700; color: var(--ink); line-height: 1.25; margin-bottom: 4px; }
-.book .narrator { font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+.book .credits { font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+.book .credits a { color: var(--muted); text-decoration: none; }
+.book .credits a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
 .book .price { font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
+.book .narrator { font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+.book .narrator a { color: var(--muted); text-decoration: none; }
+.book .narrator a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Bookseller pick badge */
+.book .pick-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #4a6cf7;
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+/* Follow button states */
+.btn-follow { background: var(--white); border-color: var(--ink); color: var(--ink); }
+.btn-follow:hover { background: var(--ink); color: var(--white); }
+.btn-follow.following { background: var(--ink); color: var(--white); }
+.btn-follow.following::before { content: "✓ "; }
 
 .cv-1 { background: linear-gradient(160deg, #2b4a78, #14254a); }
 .cv-2 { background: linear-gradient(160deg, #c1542a, #7d2d10); }
