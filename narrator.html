@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Cassandra Lin — Libro.fm</title>
 <link rel="stylesheet" href="styles.css" />
+<script src="js/config.js" defer></script>
+<script src="js/api.js" defer></script>
+<script src="js/profile.js" defer></script>
+<script src="js/prototype.js" defer></script>
 </head>
-<body>
+<body data-profile-slug="cassandra-lin">
 
 <header class="site-header">
   <div class="inner">
@@ -45,22 +49,32 @@
         Brooklyn.
       </p>
 
+      <div class="author-stats">
+        <span class="stat"><strong>42</strong> audiobooks</span>
+        <span class="sep">·</span>
+        <span class="stat"><strong>418h</strong> recorded</span>
+        <span class="sep">·</span>
+        <span class="stat"><strong>11</strong> authors</span>
+      </div>
+
       <div class="author-links">
-        <a href="#"><span class="icon">↗</span> cassandralin.com</a>
-        <a href="#"><span class="icon">✺</span> @clin_reads</a>
-        <a href="#"><span class="icon">◐</span> Instagram</a>
+        <span class="label">On the web</span>
+        <a href="#">cassandralin.com</a>
+        <a href="#">@clin_reads</a>
+        <a href="#">Instagram</a>
       </div>
 
       <div class="cta-row">
         <a href="claim.html" class="btn btn-primary">Claim this profile</a>
-        <span class="unclaimed-pill">○ Unclaimed profile</span>
+        <button type="button" class="btn btn-follow">Follow narrator</button>
       </div>
+      <div class="claim-status">Unclaimed profile · Are you Cassandra? <a href="claim.html">Claim it.</a></div>
 
       <div class="tags">
-        <span class="tag">Literary fiction</span>
-        <span class="tag">Memoir</span>
-        <span class="tag">Historical</span>
-        <span class="tag">Audie-nominated</span>
+        <a href="#" class="tag">Literary fiction</a>
+        <a href="#" class="tag">Memoir</a>
+        <a href="#" class="tag">Historical</a>
+        <a href="#" class="tag">Audie-nominated</a>
       </div>
     </div>
   </section>
@@ -72,54 +86,163 @@
     </div>
 
     <div class="book-grid">
-      <a href="#" class="book">
-        <div class="cover cv-1"><div><div class="t">The Salt Glass</div><div class="a">Eleanor Ashworth</div></div></div>
-        <div class="title">The Salt Glass</div>
-        <div class="narrator">By Eleanor Ashworth</div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="The Salt Glass cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#15314f"/>
+            <path d="M0,290 Q100,250 200,275 T400,265 L400,400 L0,400 Z" fill="#2a5a8a" opacity="0.55"/>
+            <path d="M0,325 Q120,290 200,315 T400,305 L400,400 L0,400 Z" fill="#4a82b8" opacity="0.5"/>
+            <text x="200" y="155" text-anchor="middle" fill="#efe5cc" font-family="Georgia,serif" font-style="italic" font-size="46">The Salt</text>
+            <text x="200" y="205" text-anchor="middle" fill="#efe5cc" font-family="Georgia,serif" font-style="italic" font-size="46">Glass</text>
+            <text x="200" y="370" text-anchor="middle" fill="#efe5cc" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">The Salt Glass</a></div>
+        <div class="narrator">By <a href="index.html">Eleanor Ashworth</a></div>
         <div class="price">12h 14m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-2"><div><div class="t">Harbor Light</div><div class="a">Eleanor Ashworth</div></div></div>
-        <div class="title">Harbor Light</div>
-        <div class="narrator">By Eleanor Ashworth</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="Harbor Light cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="hl2" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f4a259"/><stop offset="1" stop-color="#9c3a1a"/></linearGradient></defs>
+            <rect width="400" height="400" fill="url(#hl2)"/>
+            <circle cx="200" cy="220" r="60" fill="#fde7c2" opacity="0.8"/>
+            <rect x="195" y="260" width="10" height="100" fill="#2a1208"/>
+            <path d="M180,360 L220,360 L210,380 L190,380 Z" fill="#2a1208"/>
+            <text x="200" y="105" text-anchor="middle" fill="#fff7e6" font-family="Georgia,serif" font-size="46" font-weight="700">Harbor</text>
+            <text x="200" y="150" text-anchor="middle" fill="#fff7e6" font-family="Georgia,serif" font-size="46" font-weight="700">Light</text>
+            <text x="200" y="395" text-anchor="middle" fill="#fff7e6" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">Harbor Light</a></div>
+        <div class="narrator">By <a href="index.html">Eleanor Ashworth</a></div>
         <div class="price">10h 02m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-6"><div><div class="t">A Field of Lesser Lights</div><div class="a">Eleanor Ashworth</div></div></div>
-        <div class="title">A Field of Lesser Lights</div>
-        <div class="narrator">By Eleanor Ashworth</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="A Field of Lesser Lights cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#0d141d"/>
+            <g fill="#f1c869">
+              <circle cx="60" cy="80" r="2"/><circle cx="120" cy="50" r="3"/><circle cx="180" cy="90" r="2"/>
+              <circle cx="240" cy="60" r="2.5"/><circle cx="300" cy="100" r="2"/><circle cx="350" cy="70" r="3"/>
+              <circle cx="80" cy="160" r="2"/><circle cx="160" cy="180" r="2.5"/><circle cx="320" cy="180" r="2"/>
+              <circle cx="40" cy="220" r="2"/><circle cx="370" cy="220" r="2.5"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#efe5cc" font-family="Georgia,serif" font-size="32">A Field of</text>
+            <text x="200" y="320" text-anchor="middle" fill="#f1c869" font-family="Georgia,serif" font-size="36" font-weight="700" font-style="italic">Lesser Lights</text>
+            <text x="200" y="370" text-anchor="middle" fill="#efe5cc" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">ELEANOR ASHWORTH</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">A Field of Lesser Lights</a></div>
+        <div class="narrator">By <a href="index.html">Eleanor Ashworth</a></div>
         <div class="price">13h 22m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-4"><div><div class="t">The Astronomer's Wife</div><div class="a">Marlowe Bertram</div></div></div>
-        <div class="title">The Astronomer's Wife</div>
-        <div class="narrator">By Marlowe Bertram</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="The Astronomer's Wife cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#2a1f4a"/>
+            <circle cx="290" cy="110" r="50" fill="#f4d99c"/>
+            <circle cx="305" cy="100" r="50" fill="#2a1f4a"/>
+            <g fill="#f4d99c" opacity="0.8">
+              <circle cx="80" cy="80" r="2"/><circle cx="140" cy="160" r="1.5"/><circle cx="60" cy="200" r="2"/>
+              <circle cx="200" cy="50" r="1.5"/><circle cx="350" cy="200" r="1.5"/>
+            </g>
+            <text x="200" y="280" text-anchor="middle" fill="#f4d99c" font-family="Georgia,serif" font-size="34" font-weight="400">The Astronomer's</text>
+            <text x="200" y="325" text-anchor="middle" fill="#f4d99c" font-family="Georgia,serif" font-size="48" font-weight="700" font-style="italic">Wife</text>
+            <text x="200" y="370" text-anchor="middle" fill="#f4d99c" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">MARLOWE BERTRAM</text>
+          </svg>
+          <span class="pick-badge">Bookseller pick</span>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">The Astronomer's Wife</a></div>
+        <div class="narrator">By <a href="#">Marlowe Bertram</a></div>
         <div class="price">14h 51m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-3"><div><div class="t">Goldfinch Hours</div><div class="a">Marlowe Bertram</div></div></div>
-        <div class="title">Goldfinch Hours</div>
-        <div class="narrator">By Marlowe Bertram</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="Goldfinch Hours cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#f1c869"/>
+            <path d="M120,240 Q170,200 220,230 Q260,250 280,290 Q230,280 180,290 Q140,290 120,240Z" fill="#1a1305"/>
+            <circle cx="265" cy="245" r="3" fill="#f1c869"/>
+            <text x="200" y="100" text-anchor="middle" fill="#1a1305" font-family="Georgia,serif" font-size="48" font-weight="700">Goldfinch</text>
+            <text x="200" y="155" text-anchor="middle" fill="#1a1305" font-family="Georgia,serif" font-size="48" font-weight="400" font-style="italic">Hours</text>
+            <text x="200" y="370" text-anchor="middle" fill="#1a1305" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">MARLOWE BERTRAM</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">Goldfinch Hours</a></div>
+        <div class="narrator">By <a href="#">Marlowe Bertram</a></div>
         <div class="price">9h 18m · $13.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-5"><div><div class="t">Cinder &amp; Wren</div><div class="a">Tomás Vega</div></div></div>
-        <div class="title">Cinder &amp; Wren</div>
-        <div class="narrator">By Tomás Vega</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="Cinder &amp; Wren cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="cw" cx="0.5" cy="0.7" r="0.7"><stop offset="0" stop-color="#f1654b"/><stop offset="1" stop-color="#3a0d10"/></radialGradient></defs>
+            <rect width="400" height="400" fill="url(#cw)"/>
+            <g fill="#fde7c2" opacity="0.85">
+              <circle cx="180" cy="280" r="3"/><circle cx="220" cy="260" r="2"/><circle cx="200" cy="240" r="2.5"/>
+              <circle cx="170" cy="220" r="1.5"/><circle cx="240" cy="290" r="2"/>
+            </g>
+            <text x="200" y="160" text-anchor="middle" fill="#fde7c2" font-family="Georgia,serif" font-size="48" font-weight="700">Cinder</text>
+            <text x="200" y="210" text-anchor="middle" fill="#fde7c2" font-family="Georgia,serif" font-size="36" font-style="italic">&amp; Wren</text>
+            <text x="200" y="370" text-anchor="middle" fill="#fde7c2" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">TOMÁS VEGA</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">Cinder &amp; Wren</a></div>
+        <div class="narrator">By <a href="#">Tomás Vega</a></div>
         <div class="price">11h 09m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-8"><div><div class="t">North of Anywhere</div><div class="a">Iris Halloran</div></div></div>
-        <div class="title">North of Anywhere</div>
-        <div class="narrator">By Iris Halloran</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="North of Anywhere cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="na" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#cfe6ee"/><stop offset="1" stop-color="#5d8c9c"/></linearGradient></defs>
+            <rect width="400" height="400" fill="url(#na)"/>
+            <polygon points="50,310 130,200 200,270 280,170 360,310" fill="#1d3340" opacity="0.85"/>
+            <polygon points="50,330 130,220 200,290 280,190 360,330 360,400 50,400" fill="#0e1c26"/>
+            <text x="200" y="100" text-anchor="middle" fill="#0e1c26" font-family="Georgia,serif" font-size="36" font-weight="700">North of</text>
+            <text x="200" y="150" text-anchor="middle" fill="#0e1c26" font-family="Georgia,serif" font-size="42" font-style="italic">Anywhere</text>
+            <text x="200" y="380" text-anchor="middle" fill="#cfe6ee" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">IRIS HALLORAN</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">North of Anywhere</a></div>
+        <div class="narrator">By <a href="#">Iris Halloran</a></div>
         <div class="price">10h 44m · $14.99</div>
-      </a>
-      <a href="#" class="book">
-        <div class="cover cv-7"><div><div class="t">The Borrowed Garden</div><div class="a">Iris Halloran</div></div></div>
-        <div class="title">The Borrowed Garden</div>
-        <div class="narrator">By Iris Halloran</div>
+      </div>
+
+      <div class="book">
+        <a href="#" class="cover" aria-label="The Borrowed Garden cover">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="400" fill="#a8be8a"/>
+            <g fill="#3a4a30" opacity="0.85">
+              <ellipse cx="80" cy="320" rx="40" ry="14"/>
+              <ellipse cx="140" cy="350" rx="50" ry="16"/>
+              <ellipse cx="240" cy="340" rx="60" ry="16"/>
+              <ellipse cx="330" cy="360" rx="40" ry="14"/>
+            </g>
+            <path d="M120,280 Q140,240 160,280 Q180,240 200,280 Q220,240 240,280 Q260,240 280,280" stroke="#3a4a30" stroke-width="3" fill="none"/>
+            <text x="200" y="150" text-anchor="middle" fill="#1f2a1a" font-family="Georgia,serif" font-size="32" font-weight="400">The Borrowed</text>
+            <text x="200" y="200" text-anchor="middle" fill="#1f2a1a" font-family="Georgia,serif" font-size="50" font-weight="700" font-style="italic">Garden</text>
+            <text x="200" y="395" text-anchor="middle" fill="#1f2a1a" font-family="Helvetica,sans-serif" font-size="13" font-weight="600" letter-spacing="3">IRIS HALLORAN</text>
+          </svg>
+          <button type="button" class="play" aria-label="Play sample"></button>
+        </a>
+        <div class="title"><a href="#" style="color:inherit;text-decoration:none;">The Borrowed Garden</a></div>
+        <div class="narrator">By <a href="#">Iris Halloran</a></div>
         <div class="price">8h 27m · $13.99</div>
-      </a>
+      </div>
+
     </div>
   </section>
 
